@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// @ts-ignore
 import confetti from 'canvas-confetti';
 import { TimeLeft } from '../types';
 import { TARGET_DATE } from '../constants';
