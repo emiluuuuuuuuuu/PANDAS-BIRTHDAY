@@ -46,6 +46,57 @@ export const BowIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({ className, ..
   </svg>
 );
 
+export const CakeIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({ className, ...props }) => (
+  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} {...props}>
+    {/* Plate */}
+    <ellipse cx="50" cy="85" rx="38" ry="10" fill="#E5E7EB" opacity="0.5"/>
+    
+    {/* Bottom Tier */}
+    <path d="M25 75 L25 55 C25 50 75 50 75 55 L75 75 C75 82 25 82 25 75" fill="#FCFBF7" stroke="#2D2D2D" strokeWidth="3"/>
+    
+    {/* Bottom Frosting */}
+    <path d="M25 55 Q30 65 37.5 55 T50 55 T62.5 55 T75 55" fill="#FFB7B2" stroke="#2D2D2D" strokeWidth="3" strokeLinecap="round"/>
+
+    {/* Top Tier */}
+    <path d="M35 55 L35 35 C35 30 65 30 65 35 L65 55" fill="#FCFBF7" stroke="#2D2D2D" strokeWidth="3"/>
+    
+    {/* Top Frosting */}
+    <path d="M35 35 Q40 45 50 35 T65 35" fill="#FFB7B2" stroke="#2D2D2D" strokeWidth="3" strokeLinecap="round"/>
+
+    {/* Top Surface */}
+    <ellipse cx="50" cy="35" rx="15" ry="5" fill="#FFF0F3" stroke="#2D2D2D" strokeWidth="3"/>
+
+    {/* Candle */}
+    <rect x="48" y="15" width="4" height="20" fill="#7EB356" stroke="#2D2D2D" strokeWidth="2"/>
+    <path d="M50 15 Q52 5 50 2 Q48 5 50 15" fill="#FF8FA3" className="animate-pulse origin-bottom"/>
+
+    {/* Decor - Bamboo Leaves */}
+    <path d="M40 65 Q45 70 50 65 Q55 70 60 65" stroke="#7EB356" strokeWidth="3" strokeLinecap="round" fill="none"/>
+  </svg>
+);
+
+export const GiftIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({ className, ...props }) => (
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} {...props}>
+        {/* Box */}
+        <rect x="20" y="40" width="60" height="50" rx="4" fill="#FCFBF7" stroke="#2D2D2D" strokeWidth="3"/>
+        {/* Lid */}
+        <rect x="15" y="30" width="70" height="15" rx="2" fill="#FFB7B2" stroke="#2D2D2D" strokeWidth="3"/>
+        {/* Ribbon Vertical */}
+        <rect x="45" y="40" width="10" height="50" fill="#7EB356" stroke="#2D2D2D" strokeWidth="2"/>
+        <rect x="45" y="30" width="10" height="15" fill="#7EB356" stroke="#2D2D2D" strokeWidth="2"/>
+        {/* Bow */}
+        <path d="M50 30 C50 10 20 10 45 30" fill="#7EB356" stroke="#2D2D2D" strokeWidth="2"/>
+        <path d="M50 30 C50 10 80 10 55 30" fill="#7EB356" stroke="#2D2D2D" strokeWidth="2"/>
+        <circle cx="50" cy="30" r="4" fill="#FF8FA3" stroke="#2D2D2D" strokeWidth="2"/>
+    </svg>
+);
+
+export const StarIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({ className, ...props }) => (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} {...props}>
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+);
+
 export const BackgroundDecorations: React.FC = () => {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-panda-cream">

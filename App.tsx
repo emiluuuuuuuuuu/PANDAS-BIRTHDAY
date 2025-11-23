@@ -1,7 +1,7 @@
 import React from 'react';
 import CountdownTimer from './components/CountdownTimer';
 import DuaButton from './components/DuaButton';
-import { BackgroundDecorations, PandaIcon } from './components/Stickers';
+import { BackgroundDecorations, PandaIcon, CakeIcon } from './components/Stickers';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +26,18 @@ const App: React.FC = () => {
           </div>
 
           <CountdownTimer />
+
+          {/* Fun Cake Section */}
+          <div className="mt-10 relative group cursor-pointer" title="Make a wish!">
+             <div className="absolute inset-0 bg-gradient-to-t from-blush-100 to-transparent rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
+             <CakeIcon className="relative w-32 h-32 md:w-40 md:h-40 transform transition-all duration-300 group-hover:-translate-y-2 group-hover:rotate-3 drop-shadow-xl" />
+             <div className="absolute -top-6 right-0 opacity-0 group-hover:opacity-100 transition-all duration-500 animate-bounce delay-100">
+                <span className="text-2xl">✨</span>
+             </div>
+             <div className="absolute top-10 -left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 animate-bounce delay-75">
+                <span className="text-2xl">🎋</span>
+             </div>
+          </div>
         </section>
 
         {/* Dua Section */}
