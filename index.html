@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panda Birthday Bash</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              panda: {
+                black: '#2D2D2D',
+                dark: '#3f3f3f',
+                white: '#ffffff',
+                cream: '#fcfbf7',
+              },
+              bamboo: {
+                100: '#eef7e6',
+                300: '#bce0a1',
+                500: '#7eb356',
+                700: '#4d7a2e',
+              },
+              blush: {
+                100: '#fff0f3',
+                300: '#ffccd5',
+                400: '#ffb7b2',
+                500: '#ff8fa3',
+              }
+            },
+            fontFamily: {
+              'handwritten': ['"Pacifico"', 'cursive'],
+              'cute': ['"Fredoka"', 'sans-serif'],
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Fredoka', sans-serif;
+        background-color: #fcfbf7; /* Panda Cream */
+        color: #2D2D2D;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fcfbf7;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2D2D2D;
+        border-radius: 5px;
+        border: 2px solid #fcfbf7;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #7eb356;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-panda-cream text-panda-black antialiased overflow-x-hidden selection:bg-bamboo-300 selection:text-panda-black">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
