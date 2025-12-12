@@ -44,6 +44,8 @@
               'wiggle': 'wiggle 1s ease-in-out infinite',
               'float': 'float 6s ease-in-out infinite',
               'spin-slow': 'spin 8s linear infinite',
+              'rattle': 'rattle 0.1s ease-in-out infinite',
+              'pop-in': 'popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
             },
             keyframes: {
               wiggle: {
@@ -53,6 +55,14 @@
               float: {
                 '0%, 100%': { transform: 'translateY(0)' },
                 '50%': { transform: 'translateY(-10px)' },
+              },
+              rattle: {
+                '0%, 100%': { transform: 'rotate(-1deg) translate(0, 0)' },
+                '50%': { transform: 'rotate(1deg) translate(1px, 0)' },
+              },
+              popIn: {
+                '0%': { opacity: '0', transform: 'scale(0.5)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
               }
             }
           }
